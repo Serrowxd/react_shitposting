@@ -1,0 +1,88 @@
+span {
+  color: Red;
+}
+
+.navCont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navContainer {
+  /* margin: 1rem; */
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.navDiv {
+  display: flex;
+}
+
+.right_nav h2 {
+  margin-left: 2rem;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.right_nav h2:hover {
+  color: Red;
+}
+
+.collapse {
+  margin-left: 2rem;
+  font-size: 2rem;
+  transform: rotate(90deg);
+  margin-top: 0.7rem;
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.collapse:hover {
+  cursor: pointer;
+}
+
+.collapse_open {
+  margin-left: 2rem;
+  font-size: 2rem;
+  transform: rotate(0deg);
+  margin-top: 0.7rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.collapse_open:hover {
+  cursor: pointer;
+}
+
+.navDrop {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav_container {
+  margin: 2rem;
+}
+
+.nav_collapse {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  opacity: 0;
+  z-index: -1;
+  margin-top: -5rem;
+  width: auto;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.nav_collapse_open {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: right;
+  opacity: 1;
+  /* z-index: 1; */
+  margin-top: 0 !important;
+  width: auto;
+
+  transition: all 0.5s ease-in-out;
+}
