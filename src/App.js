@@ -41,15 +41,29 @@ class App extends Component {
         </div>
         <div
           class={open ? 'nav_collapse' : 'nav_collapse_open'}
-          onClick={this.toggle}
+          // onClick={this.toggle} // this toggles the auto-close
         >
-          <h1> Profile </h1>
-          <h1> Matches </h1>
-          <h1> Messages </h1>
-          <h1> Job Postings </h1>
-          <h1> Billing </h1>
+          <a href="#" class="nav_link">
+            <h3> Profile </h3>
+          </a>
+          <a href="#" class="nav_link">
+            <h3> Matches </h3>
+          </a>
+          <a href="#" class="nav_link">
+            <h3> Messages </h3>
+          </a>
+
+          <a href="#" class="nav_link">
+            <h3>Job Postings </h3>
+          </a>
+          <a href="#" class="nav_link">
+            <h3> Billing </h3>
+          </a>
+
           <hr />
-          <h1> Sign Out </h1>
+          <a href="#" class="nav_link">
+            <h3> Sign Out </h3>
+          </a>
         </div>
       </div>
     );
