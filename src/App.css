@@ -1,110 +1,148 @@
-span {
-  color: Red;
+/* reset */
+
+.bkg_img h1 {
+  margin: 0;
 }
 
-.navCont {
+/* Nesting */
+
+.bkg_img,
+.bro_bigtext,
+.bro_signup_cont,
+.bro_signup {
   display: flex;
+}
+
+.bro_bigtext,
+.bro_signup_cont,
+.bro_signup {
+  position: relative;
+}
+
+/* Test */
+
+.bkg_img {
+  height: 100vh;
+  background: linear-gradient(to bottom left, #2196f3, #47a7f5);
+  /* background: linear-gradient(to bottom left, #f34b21e0, #f59b47d2); */
+  /* background: linear-gradient(to bottom left, #d021f3, #d247f5); */
+  flex-direction: row;
   justify-content: space-between;
 }
 
-.navContainer {
-  /* margin: 1rem; */
-  display: flex;
-  justify-content: flex-end;
+.bro_bigtext {
+  height: 100%;
+  flex-direction: column;
+  font-size: 4rem !important;
+  margin-left: 8rem;
+  justify-content: center;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+}
+
+.bro_bigtext h4 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.bro_signup_cont {
+  margin-right: 4rem;
+  height: 100%;
+  flex-direction: column;
+  z-index: 1;
+  justify-content: center;
+}
+
+.bro_signup {
+  flex-direction: column;
+  justify-content: center;
+  height: 45rem;
+  padding: 10rem;
+  background-color: rgba(0, 0, 0, 0.26);
+  z-index: 1;
+  text-align: center;
+}
+
+.bro_signup h4 {
+  margin-top: 1rem;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+/* Sign-up Buttons Extra */
+.bro_signup button {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.bro_signup h1 {
+  color: white;
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
+
+.bro_signup p {
+  color: white;
+  padding-top: 1.8rem;
+  font-size: 1.3rem;
+  margin-bottom: -0.5rem;
+}
+
+.bkg_img img {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.5;
+  width: 100%;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
+  /* filter: grayscale(90%); */
+}
+
+.img2 {
+  padding-top: 25rem;
+  height: 5rem;
+  opacity: 1;
   z-index: 1;
 }
 
-.navDiv {
-  display: flex;
+/* Animations */
+
+/* .bro_signup h4:hover {
+  background-color: pink;
 }
 
-.right_nav h2 {
-  margin-left: 2rem;
-  transition: color 0.3s ease-in-out;
+.bro_signup h4 {
+  transition: background-color 0.3s ease;
+} */
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%)
+    center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* Button style */
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
   cursor: pointer;
-}
-
-.right_nav h2:hover {
-  color: Red;
-}
-
-.collapse {
-  margin-left: 3rem;
-  margin-right: 1rem;
-  font-size: 2.5rem;
-  transform: rotate(90deg);
-  /* margin-top: 0.7rem; */
-  margin-top: 0.5rem;
-
-  transition: transform 0.5s ease-in-out;
-}
-
-.collapse:hover {
-  cursor: pointer;
-}
-
-.collapse_open {
-  margin-left: 3rem;
-  margin-right: 1rem;
-  font-size: 2.5rem;
-  transform: rotate(0deg);
-  /* margin-top: 0.7rem; */
-  margin-top: 0.5rem;
-  transition: transform 0.5s ease-in-out;
-}
-
-.collapse_open:hover {
-  cursor: pointer;
-}
-
-.navDrop {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav_container {
-  margin: 2rem;
-}
-
-.nav_collapse {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: flex-end;
-  opacity: 0;
-  z-index: -1;
-  margin-top: -5rem;
-  width: auto;
-
-  transition: all 0.5s ease-in-out;
-}
-
-.nav_collapse_open {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  opacity: 1;
-  /* z-index: 1; */
-  margin-top: 0 !important;
-  width: auto;
-
-  transition: all 0.5s ease-in-out;
-}
-
-.nav_link {
-  text-decoration: none;
-  color: black;
-
-  transition: color 0.3s ease;
-}
-
-.nav_link:hover {
-  color: red;
-}
-
-/* Fixes the Display Flex issue for the breadcrumbs */
-
-.cont {
-  display: flex;
-  justify-content: space-between;
+  color: white;
+  background-color: #2196f3;
+  box-shadow: 0 0 4px #999;
+  outline: none;
 }
