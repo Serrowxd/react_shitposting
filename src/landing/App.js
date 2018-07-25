@@ -11,8 +11,7 @@ const App = () => {
       <img src={img} class="img1" />
       <div class="bro_bigtext">
         <h1> Job Me Bro! </h1>
-        <h4> Our Proven System WORKS!!! </h4>
-        <img src={img2} class="img2" />
+        {/* <h4> Our Proven System WORKS!!! </h4> */}
       </div>
       <div class="bro_signup_cont">
         <div class="bro_signup">
