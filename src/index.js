@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './reset.css';
 import './index.css';
-import App from './nav/App';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './styled/App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App text="I'm Working" />, document.getElementById('root'));
